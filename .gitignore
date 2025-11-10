@@ -7,7 +7,7 @@ b-cov
 *.pid
 *.gz
 *.zip
-assets/built/
+assets/built/*
 
 pids
 logs
