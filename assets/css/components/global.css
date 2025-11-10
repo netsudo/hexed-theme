@@ -16,7 +16,7 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    color: #464646;
+    color: #F5FFE3;
     font-family: var(--font-sans-serif);
     font-size: 1.5rem;
     line-height: 1.6em;
@@ -194,4 +194,45 @@ h6 {
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
+}
+
+.glow-underline{
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;  /* room for underline */
+}
+
+/* Base faint line */
+.glow-underline::after{
+  content:"";
+  position:absolute;
+  left:0; right:0; bottom:0;
+  height: 1px;
+  background: rgba(0,255,136,.60);
+}
+
+/* Moving glow “scanner” */
+.glow-underline::before{
+  content:"";
+  position:absolute;
+  left:0; right:0; bottom:0;
+  height: 1px;
+  background:
+    linear-gradient(90deg,
+      transparent 0%,
+      rgba(0,255,136,.0) 30%,
+      rgba(0,255,136,.95) 50%,
+      rgba(0,255,136,.0) 70%,
+      transparent 100%);
+  background-size: 80% 100%;            /* width of the bright band */
+  background-repeat: no-repeat;
+  filter:
+    drop-shadow(0 0 3px  #00ff88)
+    drop-shadow(0 0 4px #00ff88);
+  animation: glow-scan var(--glow-dur) ease-in-out infinite;
+}
+
+@keyframes glow-scan{
+  from { background-position: -260% 0; }
+  to   { background-position: 390% 0; }
 }
