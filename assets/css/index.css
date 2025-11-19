@@ -115,10 +115,8 @@ html,
 
 
 .gh-card-meta {
-    display: block;
-    margin: 0 0 1rem;
+    margin: 0 0 0;
     font-size: 1.4rem;
-    line-height: 1.2em;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     opacity: 0.8;
@@ -127,21 +125,28 @@ html,
 .gh-card-content {
     max-width: 720px;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
     font-size: 1.6rem;
+}
+
+.gh-post-meta-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .gh-card-content p {
     margin: 1.2rem 0;
-    padding: 0 3vmin;
 }
 
-.gh-card-content > strong {
+.gh-post-meta-container > .read-more {
     display: inline-block;
-    padding: 1px 0;
+    padding: 2px 0;
     font-weight: 500;
     box-shadow: 0 -1px 0 0 inset currentColor;
     opacity: 0.75;
+    letter-spacing: 0.4px;
+    font-size: 1.4rem;
 }
 
 
