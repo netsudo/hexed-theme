@@ -189,7 +189,7 @@ html,
 
 .gh-post-meta {
     display: block;
-    margin: 0 0 1rem;
+    margin: 0.5rem 0 0;
     font-size: 1.4rem;
     letter-spacing: 0.5px;
     text-transform: uppercase;
