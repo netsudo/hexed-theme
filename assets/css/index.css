@@ -53,14 +53,12 @@ html,
 }
 
 .gh-postfeed {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
-    gap: 4.8vmin 4vmin;
-    padding: 8vmin 0;
+    display: block;
+    padding: 8vmin 0 0 0;
 }
 
-.gh-postfeed > *:first-child {
-    grid-column: 1 / -1;
+.gh-card.post {
+    padding-bottom: 8vmin;
 }
 
 .gh-container {
