@@ -69,11 +69,13 @@
 .gh-head-menu .nav a {
     display: inline-block;
     padding: 2px 0;
-    transition: text-shadow 0.3s ease-in-out;
+    transition: 0.4s ease;
 }
 
 .gh-head-menu .nav a:hover {
-    text-shadow: 0 0 2px #fff;
+    text-decoration: none;
+    text-shadow: 0 0 3px #fff;
+    transition: 0.2s ease;
 }
 
 .gh-head-menu .nav-current a {
